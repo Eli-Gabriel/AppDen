@@ -1,0 +1,10 @@
+eu não estou aqui pra parabenizar, eu estou aqui pra condenar.
+Agendamento de consultas
+Calendário com todas as consultas do dia/semana, organizado de acordo com o dentista
+tela inicial: barra com princiais opções, agenda semanal, feed.
+--envio automático de e-mails no dia anterior à consulta
+um cliente pode não ser um cliente(1º consulta sem cadastro)
+feed com as próximas consultas na tela inicial
+mostrar a agenda semanal de cada dentista na tela inicial
+	-podendo expandir os horarios de cada dia
+		-podendo expandir com detahes da consulta em si, podendo "cancelar" a consulta.
