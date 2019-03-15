@@ -1,0 +1,126 @@
+create database dentesoft;
+\c dentesoft;
+
+create table estado(
+idestado serial not null primary key,
+nomeestado varchar(80)
+);
+
+create table cidade(
+idcidade serial not null primary key,
+nomecidade varchar(80),
+idestado int,
+foreign key (idestado) references estado(idestado)
+);
+
+create table cliente(
+idcliente serial not null primary key,
+nome varchar(80),
+rg varchar(7),
+cpf varchar(11),
+cep varchar(8),
+bairro varchar(80),
+numero varchar(4),
+rua varchar(80),
+telefone varchar(9),
+email varchar(80),
+obs text,
+idcidade int,
+foreign key (idcidade) references cidade(idcidade)
+);
+
+create table parentesco(
+idparente integer,
+idcliente integer,
+tipoparente varchar(10),
+foreign key (idcliente) references cliente(idcliente),
+foreign key (idparente) references cliente(idcliente),
+primary key(idparente, idcliente)
+);
+
+create table consultorio(
+idconsultorio serial not null primary key,
+cnpj varchar(14),
+nomefantasia varchar(80),
+telefone varchar(9)
+);
+
+create table atendente(
+idatendente serial not null primary key,
+nome varchar(80),
+email varchar(80),
+telefone varchar(9),
+dtnasc date,
+cpf varchar(11),
+rg varchar(7),
+idconsultorio integer,
+foreign key (idconsultorio) references consultorio(idconsultorio)
+);
+
+create table especialidade(
+idespecialidade serial not null primary key,
+nome varchar(80),
+nivel varchar(80),
+instituicao varchar(80),
+descricao text
+);
+
+create table dentista(
+iddentista serial not null primary key,
+nome varchar(80),
+cfo varchar(8),
+rg varchar(7),
+cpf varchar(11),
+email varchar(80),
+telefone varchar(9)
+);
+
+create table tratamento(
+idtratamento serial not null primary key,
+nome varchar(80),
+consultasestimadas integer,
+valortratamento money,
+entrada money,
+parcelamento integer,
+descricao text
+);
+
+create table consulta(
+idconsulta serial not null primary key,
+valorconsulta money,
+pago boolean,
+data date,
+hora time,
+obs text,
+idconsultorio integer,
+iddentista integer,
+idcliente integer,
+foreign key (idconsultorio) references consultorio(idconsultorio),
+foreign key (iddentista) references dentista(iddentista),
+foreign key (idcliente) references cliente(idcliente)
+);
+
+create table pertence(
+idconsulta integer,
+idtratamento integer,
+foreign key (idconsulta) references consulta(idconsulta),
+foreign key (idtratamento ) references tratamento(idtratamento),
+primary key(idconsulta, idtratamento)
+);
+
+create table formado(
+iddentista integer,
+idespecialidade integer,
+data date,
+foreign key (iddentista) references dentista(iddentista),
+foreign key (idespecialidade) references especialidade(idespecialidade),
+primary key(iddentista, idespecialidade)
+);
+
+create table trabalha(
+iddentista integer,
+idconsultorio integer,
+foreign key (iddentista) references dentista(iddentista),
+foreign key (idconsultorio) references consultorio(idconsultorio),
+primary key(iddentista, idconsultorio)
+);
