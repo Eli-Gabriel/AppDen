@@ -1,0 +1,96 @@
+INSERT INTO estado VALUES(default, 'São Paolo');
+INSERT INTO estado VALUES(default, 'Paranáue');
+INSERT INTO estado VALUES(default, 'Baia');
+INSERT INTO estado VALUES(default, 'Minas Craft');
+INSERT INTO estado VALUES(default, 'Alqueiro');
+INSERT INTO estado VALUES(default, 'Bahia');
+INSERT INTO estado VALUES(default, 'Goiás');
+INSERT INTO estado VALUES(default, 'Mato Grosso');
+
+INSERT INTO cidade VALUES(default, 'Ouro Amarelo', 5);
+INSERT INTO cidade VALUES(default, 'Paraná', 2);
+INSERT INTO cidade VALUES(default, 'Presidente Medice', 2);
+INSERT INTO cidade VALUES(default, 'Porto de Velho', 4);
+INSERT INTO cidade VALUES(default, 'Jacarepaguá', 1);
+INSERT INTO cidade VALUES(default, 'Salvado', 6);
+INSERT INTO cidade VALUES(default, 'Vila Nova', 7);
+INSERT INTO cidade VALUES(default, 'Cuiabá', 8);
+
+INSERT INTO cliente VALUES(default, 'JOAO JOSE DA SILVA', '1117234', '246065405', '769678', 'JARDIM DOS MIGRANTES', '1144', 'RUA RIO BRANCO', '34234864', 'JOAODASILVA@GMAIL.COM', 'SEM OBSERVACAO', 1);
+INSERT INTO cliente VALUES(default, 'VIAN OLOVEIRA ROCHA', '103456', '01623464370', '769647', 'JARDIM PRESIDENCIAL', '320', 'RUA PADRE CICERO', '34212343', 'VIAN@GMAIL.COM', 'SEM OBSERVACAO', 1);
+INSERT INTO cliente VALUES(default, 'ANTONIO SILVEIRA', '875643', '47076487668', '690', 'CENTRO', '1487', 'AVENIDA INTEGRACAO', '34632467', 'ANTONIOSILVEIRA@GMAIL.COM', 'SEM OBSERVACAO', 2);
+INSERT INTO cliente VALUES(default, 'Luna Lorena Mariana Baptista' , '3326575', '95690231983', '78048550', 'Jardim Alvorada', '455', 'Rua Almerindo de Almeida', '39532630', 'lunalorenamarianabaptista-88@libbero.com.br', 'SEM OBSERVAÇÃO', 5);
+INSERT INTO cliente VALUES(default, 'Isabelle Vera Ribeiro' , '6377636', '45488392599', '79004461', 'Vila Glória', '572', 'Rua Felipe Saab', '28959263', 'alanaemanuellymarinadacruz.alanaemanuellymarinadacruz@oxiteno.com', 'SEM OBSERVAÇÃO', 5);
+INSERT INTO cliente VALUES(default, 'Maria Aparecida da Silva' , '7766872', '87632208482', '31224234', 'Novo Horizonte', '1243', 'Rua das Castanhas', '345672975', 'cida2010@oxiteno.com', 'SEM OBSERVAÇÃO', 6);
+INSERT INTO cliente VALUES(default, 'José Augusto de Almeida' , '3245748', '94243209291', '54765009', 'Esplanadas', '2263', 'Rua dos Nordestinos', '34347654', 'almeidajose@oxiteno.com', 'SEM OBSERVAÇÃO', 7);
+INSERT INTO cliente VALUES(default, 'Marcelo Ramos' , '8293872', '76587604391', '76913008', 'Campo Novo', '2345', 'Rua Marechal Rondon', '32168762', 'Ramos_mt@oxiteno.com', 'SEM OBSERVAÇÃO', 8);
+
+INSERT INTO parentesco VALUES(1, 3, 'pai');
+INSERT INTO parentesco VALUES(1, 5, 'irmao');
+INSERT INTO parentesco VALUES(4, 3, 'mae');
+INSERT INTO parentesco VALUES(4, 2, 'irma');
+INSERT INTO parentesco VALUES(4, 5, 'mae');
+
+INSERT INTO consultorio VALUES(default, '15270825000101' , 'DENTELIMPO', '34242895');
+INSERT INTO consultorio VALUES(default, '05170625000113' , 'SORRISOLimpo', '35222895');
+INSERT INTO consultorio VALUES(default, '98124567000124' , 'CARIELIMPA', '34416578');
+INSERT INTO consultorio VALUES(default, '65654379000107' , 'Saúde bucal ltda', '25316519');
+INSERT INTO consultorio VALUES(default, '79571988000107' , 'BemEstarGLB', '998543981');
+INSERT INTO consultorio VALUES(default, '76457284000101' , 'HP odontologia', '993459876');
+INSERT INTO consultorio VALUES(default, '76793845000101' , 'Sorriso Novo', '993765423');
+
+INSERT INTO atendente VALUES(default, 'monica soares', 'monicasr@hotmail.com' ,'993457865', '23/03/1991', '23443278668', '384194', 1);
+INSERT INTO atendente VALUES(default, 'franciele pereira', 'franpereira@outlook.com' ,'981349845', '09/07/1989', '10584902368', '2067115', 2);
+INSERT INTO atendente VALUES(default, 'melissa castro', 'castormel@yahoo.com' ,'34246309', '12/10/1990', '98420417409', '1027482', 3);
+INSERT INTO atendente VALUES(default, 'Sérgio Pedro Vieira', 'ssergiopedrovieira@tuenkers.com.br' ,'39260560', '12/02/1996', '32267601060', '3798072', 4);
+INSERT INTO atendente VALUES(default, 'Márcio Thiago Duarte', 'marciothiagoduarte_@sicredi.com.br' ,'25776276', '14/12/1996', '27543718936', '2537376', 5);
+INSERT INTO atendente VALUES(default, 'Juliana Alves', 'juju_jipa2006@sicredi.com.br' ,'34167624', '23/06/2006', '78387398791', '6528769', 6);
+INSERT INTO atendente VALUES(default, 'Andreia Silva', 'drika_spr@sicredi.com.br' ,'34163748', '19/03/1997', '63598798772', '3465843', 7);
+
+INSERT INTO especialidade VALUES(default, 'Implantodontia', 'especializacao' ,'USP', 'sem observação');
+INSERT INTO especialidade VALUES(default, 'Ortodontia', 'especializacao' ,'Facimed', 'sem observação');
+INSERT INTO especialidade VALUES(default, 'Periodontia', 'especializacao' ,'Sao Lucas', 'sem observação');
+INSERT INTO especialidade VALUES(default, 'Dentística', 'especializacao' ,'Varejão do Ensino', 'observação');
+INSERT INTO especialidade VALUES(default, 'Dentística', 'especializacao' ,'Unijipa', 'observação');
+INSERT INTO especialidade VALUES(default, 'Ortodontia', 'especializacao' ,'Unir', 'observação');
+INSERT INTO especialidade VALUES(default, 'Dentística', 'especializacao' ,'IFRO', 'observação');
+
+INSERT INTO dentista VALUES(default, 'Carlos andrade', 'CRO 1846' ,'345219', '354387667','andradec@gmail.com', '34552387');
+INSERT INTO dentista VALUES(default, 'Marcos Arrabal', 'CRO 2012' ,'028471', '596723961','arrabalmar@bol.com.br', '218325');
+INSERT INTO dentista VALUES(default, 'Adriano Costa', 'CRO 0928' ,'09183', '12054387290','costaad@uol.com.br', '32248745');
+INSERT INTO dentista VALUES(default, 'Jaqueline Rosângela Valentina Aparício', 'CRO 2784' ,'3184504', '62992434817','jjaquelinerosangelavalentinaaparicio@bds.com.br', '25623603');
+INSERT INTO dentista VALUES(default, 'Laura Aurora Moura', 'CRO 7660' ,'2198907', '37338405506', 'lauraauroramoura_@broutdoor.com.br', '992979740');
+INSERT INTO dentista VALUES(default, 'Larissa Campos Nascimento', 'CRO 7654' ,'5687543', '56738405506', 'larissa_campos@broutdoor.com.br', '993659876');
+INSERT INTO dentista VALUES(default, 'Leticia Campos Nascimento', 'CRO 7667' ,'3457543', '77738405506', 'leticia_campos@broutdoor.com.br', '993659878');
+
+INSERT INTO tratamento VALUES(default, 'PRÓTESE DENTÁRIA', 3, '1.118,','280', 03, 'sem observacao');
+INSERT INTO tratamento VALUES(default, 'CANAL', 2, '760,','280', 02, 'sem observacao');
+INSERT INTO tratamento VALUES(default, 'RESTAURAÇÃO', 5, '1.980','580', 06, 'sem observacao');
+INSERT INTO tratamento VALUES(default, 'CLAREAMENTO', 3, '789','250', 06, 'sem observacao');
+INSERT INTO tratamento VALUES(default, 'REVISÃO GERAL', 7, '545','250', 06, 'sem observacao');
+INSERT INTO tratamento VALUES(default, 'CLAREAMENTO', 2, '700','250', 06, 'sem observacao');
+
+
+INSERT INTO consulta VALUES(default, '760', true, '23/03/2018', '09:32', 'sem observação', 3, 1, 2);
+INSERT INTO consulta VALUES(default, '1.980', false, '02/07/2018', '08:55', 'sem observação', 1, 3, 3);
+INSERT INTO consulta VALUES(default, '1.118', false, '14/10/2018', '10:16', 'sem observação', 2, 2, 1);
+INSERT INTO consulta VALUES(default, '50', true, '15/08/2019', '09:40', 'sem observação', 2, 2, 1);
+INSERT INTO consulta VALUES(default, '75.50', false, '23/11/2018', '08:30', 'sem observação', 2, 2, 1);
+
+INSERT INTO pertence VALUES(1, 1);
+INSERT INTO pertence VALUES(2, 2);
+INSERT INTO pertence VALUES(3, 3);
+INSERT INTO pertence VALUES(4, 3);
+INSERT INTO pertence VALUES(5, 3);
+
+INSERT INTO formado VALUES(1, 2, '12/12/29');
+INSERT INTO formado VALUES(3, 3, '10/12/2010');
+INSERT INTO formado VALUES(2, 1, '18/06/29');
+INSERT INTO formado VALUES(3, 1, '18/06/29');
+INSERT INTO formado VALUES(4, 1, '18/06/29');
+
+INSERT INTO trabalha VALUES(1, 2);
+INSERT INTO trabalha VALUES(3, 1);
+INSERT INTO trabalha VALUES(2, 3);
+INSERT INTO trabalha VALUES(1, 3);
+INSERT INTO trabalha VALUES(2, 2);
