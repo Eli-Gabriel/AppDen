@@ -3,12 +3,12 @@ create database dentesoft;
 
 create table estado(
 idestado serial not null primary key,
-nomeestado varchar(80)
+nome varchar(80)
 );
 
 create table cidade(
 idcidade serial not null primary key,
-nomecidade varchar(80),
+nome varchar(80),
 idestado int,
 foreign key (idestado) references estado(idestado)
 );

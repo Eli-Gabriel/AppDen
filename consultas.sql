@@ -1,36 +1,42 @@
---relação de clientes e consultas agendadas
+--relação de clientes, consultas agendadas e dentista que ira executar a consulta
 select 
-cliente.nome, cliente.rg, cliente.cpf, cliente.telefone, cliente.email, 
-consulta.data, consulta.hora, consulta.valorconsulta, consulta.pago  
-from 
-cliente join consulta on cliente.idcliente = consulta.idcliente;
+cliente.nome as "Cliente", cliente.cpf, cliente.telefone, cliente.email, 
+consulta.data, consulta.hora, consulta.valorconsulta, consulta.pago, 
+dentista.nome as "Dentista", dentista.cfo
+from cliente 
+join consulta on cliente.idcliente = consulta.idcliente
+join dentista on consulta.iddentista = dentista.iddentista;
 
 
 --relação de clientes e endereços
 select 
-cliente.nome, cliente.rg, cliente.cpf, 
-cidade.nomecidade, estado.nomeestado
+cliente.nome, cliente.cep, cliente.rua, cliente.numero, cliente.bairro, 
+cidade.nome, estado.nome
 from cliente 
 join cidade on cliente.idcidade = cidade.idcidade
 join estado on cidade.idestado = estado.idestado;
 
---relação de clientes e parentes
-/*select
-cliente.nome as "Cliente", parentesco.tipoparente, cliente.nome as "Parente"
-from cliente
-join parentesco on cliente.idcliente = parentesco.idcliente
-and parentesco.idparente = cliente.idcliente;*/
-
 --relação de dentistas e formação
 select
-dentista.nome, dentista.cfo, dentista.rg, dentista.cpf, 
-especialidade.nome, especialidade.nivel
+dentista.nome as "Dentista", dentista.cfo, dentista.rg, dentista.cpf, 
+formado.data,
+especialidade.nome as "Especialidade", especialidade.nivel
 from dentista
 join formado on dentista.iddentista = formado.iddentista
 join especialidade on formado.idespecialidade  = especialidade.idespecialidade;
-;
+
+--Consultórios e dentistas/atendentes que trabalhem nele
+select 
+consultorio.nomefantasia as "Consultório", consultorio.cnpj, 
+dentista.nome as "Dentista", 
+atendente.nome as "Atendente"
+from atendente
+join consultorio on atendente.idconsultorio = consultorio.idconsultorio
+join trabalha on consultorio.idconsultorio = trabalha.idconsultorio
+join dentista on trabalha.iddentista = dentista.iddentista;
+
 --
---
+
 --
 --
 --
