@@ -42,24 +42,24 @@ except
 select consultorio.nomeFantasia from consultorio
 join consulta on consultorio.idConsultorio = consulta.idConsultorio--*/
 
-select 
+select consultorio.idConsultorio,
 --/*valor_total_recebido_por_consultorio
-(select sum(consulta.valorConsulta),
-consultorio.nomeFantasia
+(select sum(consulta.valorConsulta)--,consultorio.nomeFantasia
 from consulta
 join consultorio on consulta.idConsultorio = consultorio.idConsultorio
-where consulta.pago=true )
+where consulta.pago=true ),
 --group by consulta.idConsultorio, consultorio.nomeFantasia),--*/
 
 --/*valor_total_pendente_por_consultorio
-(select sum(consulta.valorConsulta),
+(select sum(consulta.valorConsulta)--,consultorio.nomeFantasia
+from consulta
+join consultorio on consulta.idConsultorio = consultorio.idConsultorio
+where consulta.pago=false ),
+--group by consulta.idConsultorio, consultorio.nomeFantasia)--*/
 consultorio.nomeFantasia
 from consulta
 join consultorio on consulta.idConsultorio = consultorio.idConsultorio
-where consulta.pago=false )
---group by consulta.idConsultorio, consultorio.nomeFantasia)--*/
-
-
+group by consultorio.idConsultorio, consulta.idConsultorio, consultorio.nomeFantasia
 
 /*comissao_por_dentista
 select sum(consulta.valorConsulta)*0.6,
